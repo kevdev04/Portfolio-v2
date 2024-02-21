@@ -1,0 +1,68 @@
+---
+const { svg, text, url} = Astro.props;
+---
+
+<a href={url} class="button-container">
+  <div class="icon-container">
+    <img src={svg} alt="icon" class="button-icon" />
+  </div>
+  <div class="text-container">
+    <p class="text">{text}</p>
+  </div>
+</a>
+
+
+<style>
+
+.button-container {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  align-items: center;
+
+  height: 4rem;
+  width: 12rem;
+
+  border-radius: 40px;
+  border: black 1px solid;
+
+  background-color: #ffffff;
+  color: black;
+  text-decoration: none;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+  
+  border-radius: 40px 0px 0px 40px;
+  background-color: #dbdbdb;
+}
+
+.button-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;}
+
+</style>

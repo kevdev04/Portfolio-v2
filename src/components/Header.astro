@@ -1,0 +1,90 @@
+---
+import Button from "./ui/Button.astro";
+---
+
+<header>
+  <a href="" class="logo">Kevin Garcia</a>
+	<nav>
+    <a href="/">Blog</a>
+    <a href="/blog">About me</a>
+    <a href="/projects">Projects</a>
+  </nav>
+	<div class="contact-container">
+		<Button
+			svg="/file-text.svg"
+			text="Resume"
+			url="https://drive.google.com/file/d/1-wAhYfLVP-uWp5RUz4HWFqEaQJ9F5fqa/view?usp=sharing"
+		/>
+		<Button
+			svg="/linkedin.svg"
+			text="LinkedIn"
+			url="https://www.linkedin.com/in/kevingael/"
+		/>
+	</div>
+</header>
+
+<style>
+	header {
+		display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+		align-items: center;
+
+		padding: 1rem;
+		height: 12vh;
+		width: 100%;
+
+
+	}
+	
+	
+
+	nav {
+		display: flex;
+		justify-content: space-evenly;
+		align-items: center;
+		width: 100%;
+		padding: 0 2rem;
+
+		a {
+			font-size: 1.5rem;
+			text-decoration: none;
+			color: black;
+			border-bottom: 0 solid transparent; /* Initial border-bottom width and color */
+    transition: border-bottom 0.3s ease;
+		}
+
+		a:hover {
+			color: #0284C7;
+			border-bottom: 2px solid #0284C7; 
+		}
+	}
+  .contact-container {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+		text-decoration: none;
+  }
+
+	@media (max-width: 768px) {
+		header {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			align-items: center;
+
+			nav {
+				display: none;
+				
+			}
+			.contact-container {
+				display: none;
+			}
+		}
+			
+	}
+</style>
