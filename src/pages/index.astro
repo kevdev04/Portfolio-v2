@@ -1,18 +1,17 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Hero from "../components/Hero.astro"
-import About from '../components/About.astro';
-// import Projects from '../components/Projects';
+import Hero from "../components/Hero.astro";
+import About from "../components/About.astro";
+import Projects from '../components/Projects.astro';
 ---
 
 <Layout title="Kevin's Portfolio">
 	<main class="flex">
 		<Hero />
 		<About />
-		<!-- <Projects />  -->
+		<Projects /> 
 	</main>
 </Layout>
-
 
 <style>
 	.flex {
@@ -24,37 +23,46 @@ import About from '../components/About.astro';
 </style>
 
 <script>
-	document.addEventListener('DOMContentLoaded', function() {
-    const anchorLink = document.getElementById('toabout');
+	document.addEventListener("DOMContentLoaded", function () {
+		const anchorLink = document.getElementById("toabout");
+		const anotherOne = document.getElementById("toabout2");
+		const anchorProjects = document.getElementById("toprojects");
 
-    if (anchorLink) {
-        anchorLink.addEventListener('click', function(event) {
-            // Call the function with the ID of the target section
-            scrollToTargetOnClick(event, 'about');
-        });
-    } else {
-        console.error("Element with ID 'toabout' not found.");
-    }
-});
+		function scrollToTargetOnClick(event, targetId) {
+			event.preventDefault();
+			const targetElement = document.getElementById(targetId);
 
-function scrollToTargetOnClick(event, targetId) {
-    // Check if the clicked element has a specific ID
-    if (event.target.id === 'toabout') {
-        // Prevent the default behavior of the anchor tag
-        event.preventDefault();
+			if (targetElement) {
+				window.scroll({
+					behavior: "smooth",
+					left: 0,
+					top: targetElement.offsetTop,
+				});
+			}
+		}
 
-        const targetElement = document.getElementById(targetId);
+		if (anchorLink) {
+			anchorLink.addEventListener("click", function (event) {
+				scrollToTargetOnClick(event, "about");
+			});
+		} else {
+			console.error("Element with ID 'toabout' not found.");
+		}
 
-        if (targetElement) {
-            window.scroll({
-                behavior: 'smooth',
-                left: 0,
-                top: targetElement.offsetTop
-            });
-        }
-    }
-}
+		if (anotherOne) {
+			anotherOne.addEventListener("click", function (event) {
+				scrollToTargetOnClick(event, "about");
+			});
+		} else {
+			console.error("Element with ID 'toabout2' not found.");
+		}
 
-
-
+		if (anchorProjects) {
+			anchorProjects.addEventListener("click", function (event) {
+				scrollToTargetOnClick(event, "projects");
+			});
+		} else {
+			console.error("Element with ID 'toprojects' not found.");
+		}
+	});
 </script>

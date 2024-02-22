@@ -6,7 +6,7 @@
 	<div class="hero-leftside">
 		<div class="hero-text-container"></div>
 		<div class="hero-btn">
-			<a id="toabout" href="#">About Me</a>
+			<a id="toabout2" href="#">About Me</a>
 		</div>
 	</div>
 
@@ -168,14 +168,13 @@
 			setTimeout(() => {
 				// Start the dripping animation
 				const drip = document.querySelector(".drip") as HTMLElement;
-				drip.style.height = "50px"; // Adjust the height as needed
 			}, 500);
 			return;
 		}
 
 		setTimeout(() => {
 			textType(element, text, i + 1);
-		}, 50);
+		}, 40);
 	}
 
 	textType(heroText, text);
