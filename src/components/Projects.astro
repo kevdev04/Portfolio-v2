@@ -3,144 +3,189 @@
 ---
 
 <section id="projects">
-  <div class="bento-grid">
-    <div class="grid-left">
-      <div><span>Coming Soon...</span></div>
-      <div><span>Coming Soon...</span></div>
-      <div><span>Coming Soon...</span></div>
-    </div>
-    <div class="grid-mid">
-      <div id="header"><h1>Projects</h1></div>
-      <div><span>Coming Soon...</span></div>
-    </div>
-    <div class="grid-right">
-      <div><span>Coming Soon...</span></div>
-      <div><span>Coming Soon...</span></div>
-      <div><span>Coming Soon...</span></div>
-    </div>
-  </div>
+	<div class="bento-grid">
+		<div class="grid-left">
+			<div><span>Coming Soon...</span></div>
+			<div><span>Coming Soon...</span></div>
+			<div><span>Coming Soon...</span></div>
+		</div>
+		<div class="grid-mid">
+			<div id="header"><h1>Projects</h1></div>
+			<div>
+				<img src="/mobile.webp" alt="" />
+				<span>Coming Soon...</span>
+			</div>
+		</div>
+		<div class="grid-right">
+			<div><span>Coming Soon...</span></div>
+			<div><span>Coming Soon...</span></div>
+			<div><span>Coming Soon...</span></div>
+		</div>
+	</div>
 </section>
 
 <style>
+	section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		width: 100%;
+		background-color: #0284c7;
+		margin-top: 5rem;
+		border-radius: 20px;
 
-  section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    background-color: #0284C7;
-    margin-top: 5rem;
-    border-radius: 20px;
+		h1 {
+			color: #fff;
+			font-size: 2rem;
+			margin-bottom: 2rem;
+		}
 
-    h1 {
-      color: #fff;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
+		.bento-grid {
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr;
+			grid-gap: 20px;
+			width: 100%;
+			height: 100%;
+			margin: 0 auto;
 
+			padding: 20px;
+			text-align: center;
+			background-color: #fff;
+			border-radius: 5px;
 
-    .bento-grid {
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      grid-gap: 20px;
-      width: 100%;
-      height: 100%;
-      margin: 0 auto;
+			div {
+				padding: 20px;
+				border-radius: 10px;
+			}
 
-      padding: 20px;
-      text-align: center;
-      background-color: #fff;
-      border-radius: 5px;
+			span {
+				font-size: 2rem;
+			}
 
-      div {
-        padding: 20px;
-        border-radius: 10px;
-      }
+			.grid-left {
+				display: grid;
+				grid-template-rows: 2fr 3fr 1fr;
+				grid-gap: 20px;
+				grid-column: 1;
 
-      span {
-        font-size: 2rem;
-      }
+				div {
+					cursor: pointer;
+					color: #fff;
+					transition: transform 0.3s ease-in-out;
+					background-color: #c6eafb;
+					box-shadow:
+						rgba(0, 0, 0, 0.4) 0px 2px 4px,
+						rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+						rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+				}
 
-      .grid-left {
-        display: grid;
-        grid-template-rows: 2fr 3fr 1fr;
-        grid-gap: 20px;
-        grid-column: 1;
+				div:hover {
+					background-color: #0284c7;
+					color: #fff;
+					transform: scale(1.05);
+				}
+			}
 
-        div {
-          background-color: #c6eafb;
-          color: #fff;
-        }
+			.grid-mid {
+				display: grid;
+				grid-template-rows: 1fr 3fr;
+				grid-gap: 20px;
+				grid-column: 2;
 
-      }
+				div {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					background-color: #c6eafb;
+					color: #fff;
+					cursor: pointer;
+					transition: transform 0.3s ease-in-out;
+					box-shadow:
+						rgba(0, 0, 0, 0.4) 0px 2px 4px,
+						rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+						rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+				}
 
-      .grid-mid {
-        display: grid;
-        grid-template-rows: 2fr 5fr;
-        grid-gap: 20px;
-        grid-column: 2;
+				div:hover {
+					background-color: #0284c7;
+					color: #fff;
+					transform: scale(1.05);
+					img {
+            transition: 0.3s ease-in-out;
+						transform: scale(1.2);
+					}
+				}
 
-        div {
-          background-color: #c6eafb;
-          color: #fff;
-        }
+				#header {
+					background-color: #0284c7;
+					transform: none;
+					box-shadow: none;
 
-        #header {
-          background-color: #0285c7f1;
+					h1 {
+						color: #fff;
+						font-size: 4rem;
+						margin-bottom: 2rem;
+					}
+				}
+			}
 
-          h1 {
-            color: #fff;
-            font-size: 4rem;
-            margin-bottom: 2rem;
-          }
-        }
-      }
+			.grid-right {
+				display: grid;
+				grid-template-rows: 4fr 4fr 1fr;
+				grid-gap: 20px;
+				grid-column: 3;
 
-      .grid-right {
-        display: grid;
-        grid-template-rows: 4fr 4fr 1fr;
-        grid-gap: 20px;
-        grid-column: 3;
+				div {
+					background-color: #c6eafb;
+					color: #fff;
+					cursor: pointer;
+					transition: transform 0.3s ease-in-out;
+					box-shadow:
+						rgba(0, 0, 0, 0.4) 0px 2px 4px,
+						rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+						rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+				}
 
-        div {
-          background-color: #c6eafb;
-          color: #fff;
-        }
-      }
-    }
-  }
+				div:hover {
+					background-color: #0284c7;
+					color: #fff;
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
 
-  @media (max-width: 768px) {
-    section {
-      .bento-grid {
-        grid-template-columns: 1fr;
-        
-        span {
-          font-size: 1.5rem;
-        }
+	@media (max-width: 768px) {
+		section {
+			.bento-grid {
+				grid-template-columns: 1fr;
 
-        .grid-left,
-        .grid-mid,
-        .grid-right {
-          grid-template-rows: auto;
-          grid-gap: 20px;
-          grid-column: 1;
-        }
+				span {
+					font-size: 1.5rem;
+				}
 
-        .grid-left div,
-        .grid-mid div,
-        .grid-right div {
-          padding: 10px;
-          height: 25rem;
-        }
+				.grid-left,
+				.grid-mid,
+				.grid-right {
+					grid-template-rows: auto;
+					grid-gap: 20px;
+					grid-column: 1;
+				}
 
-        #header h1 {
-          font-size: 3rem;
-        }
-      }
-    }
-  }
+				.grid-left div,
+				.grid-mid div,
+				.grid-right div {
+					padding: 10px;
+					height: 25rem;
+				}
 
+				#header h1 {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
 </style>

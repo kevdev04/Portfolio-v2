@@ -5,18 +5,18 @@ import Certification from "./ui/Certification.astro";
 
 <section id="about" class="about-container">
 	<div class="first-container">
-		<img class="profile-picture" src="/pfp.jpeg" alt="profile picture" />
+		<img class="profile-picture" src="/pfp.webp" alt="profile picture" />
 		<div class="position-container">
 			<p class="name">
 				<span>K</span>evin <span>G</span>arcia <span>C</span>ristobal
 			</p>
 			<p class="position">Freshman Software Engineer</p>
 			<ul class="interests">
-				<li>Web Development</li>
-				<li>UI/UX Design</li>
+				<li>FrontEnd</li>
 				<li>Mobile Development</li>
 				<li>UI/UX Design</li>
-				<li>UI/UX Design</li>
+				<li>Design System</li>
+				<li>BackEnd</li>
 			</ul>
 			<div class="interests-2">
 				<img src="/brand-typescript.svg" alt="" />
@@ -40,7 +40,7 @@ import Certification from "./ui/Certification.astro";
 			<div class="chat">
 				<div class="sender">
 					<div class="chat-profile-container">
-						<img src="/pfp.jpeg" alt="" />
+						<img src="/pfp.webp" alt="" />
 						<span>Kev</span>
 					</div>
 					<p>
@@ -50,7 +50,7 @@ import Certification from "./ui/Certification.astro";
 				</div>
 				<div class="receiver">
 					<div class="chat-profile-container">
-						<img src="/elon.jpg" alt="" />
+						<img src="/elon.webp" alt="" />
 						<span>Elon</span>
 					</div>
 					<p>
@@ -59,7 +59,7 @@ import Certification from "./ui/Certification.astro";
 				</div>
 				<div class="sender">
 					<div class="chat-profile-container">
-						<img src="/pfp.jpeg" alt="" />
+						<img src="/pfp.webp" alt="" />
 						<span>kev</span>
 					</div>
 					<p>
@@ -70,21 +70,21 @@ import Certification from "./ui/Certification.astro";
 				</div>
 				<div class="receiver">
 					<div class="chat-profile-container">
-						<img src="/elon.jpg" alt="" />
+						<img src="/elon.webp" alt="" />
 						<span>Elon</span>
 					</div>
 					<p>So, What's next?</p>
 				</div>
 				<div class="sender">
 					<div class="chat-profile-container">
-						<img src="/pfp.jpeg" alt="" />
+						<img src="/pfp.webp" alt="" />
 						<span>kev</span>
 					</div>
 					<p>Land an Internship!</p>
 				</div>
 				<div class="receiver">
 					<div class="chat-profile-container">
-						<img src="/elon.jpg" alt="" />
+						<img src="/elon.webp" alt="" />
 						<span>Elon</span>
 					</div>
 					<p>I believe your mindset will take you there!</p>
@@ -97,7 +97,7 @@ import Certification from "./ui/Certification.astro";
 					value=""
 					placeholder="Ask for information about me"
 				/>
-				<input class="chat-typer-btn" type="button" />
+				<input id="tojourney2" class="chat-typer-btn" type="button" />
 			</form>
 		</div>
 	</div>
@@ -397,7 +397,7 @@ import Certification from "./ui/Certification.astro";
 					padding: 1rem;
 					margin: 0;
 					color: white;
-					border-radius: 50px 50px 50px 0;
+					border-radius: 20px 20px 20px 0;
 					border: #0284c7 1px solid;
 					background-color: #0284c7;
 				}
@@ -417,7 +417,7 @@ import Certification from "./ui/Certification.astro";
 					padding: 1rem;
 					margin: 0;
 					color: white;
-					border-radius: 50px 50px 0 50px;
+					border-radius: 20px 20px 0 20px;
 					border: #0284c7 1px solid;
 					background-color: #0284c7;
 				}
@@ -467,6 +467,7 @@ import Certification from "./ui/Certification.astro";
 				background-size: 35px;
 				background-repeat: no-repeat;
 				background-position: center;
+				box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 			}
 		}
 

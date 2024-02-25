@@ -3,12 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import About from "../components/About.astro";
 import Projects from '../components/Projects.astro';
+import Journey from '../components/Journey.astro';
 ---
 
 <Layout title="Kevin's Portfolio">
 	<main class="flex">
 		<Hero />
 		<About />
+		<Journey />
 		<Projects /> 
 	</main>
 </Layout>
@@ -27,6 +29,8 @@ import Projects from '../components/Projects.astro';
 		const anchorLink = document.getElementById("toabout");
 		const anotherOne = document.getElementById("toabout2");
 		const anchorProjects = document.getElementById("toprojects");
+		const anchorJourney = document.getElementById("tojourney");
+		const anchorJourney2 = document.getElementById("tojourney2");
 
 		function scrollToTargetOnClick(event, targetId) {
 			event.preventDefault();
@@ -63,6 +67,22 @@ import Projects from '../components/Projects.astro';
 			});
 		} else {
 			console.error("Element with ID 'toprojects' not found.");
+		}
+
+		if (anchorJourney) {
+			anchorJourney.addEventListener("click", function (event) {
+				scrollToTargetOnClick(event, "journey");
+			});
+		} else {
+			console.error("Element with ID 'tojourney' not found.");
+		}
+
+		if (anchorJourney2) {
+			anchorJourney2.addEventListener("click", function (event) {
+				scrollToTargetOnClick(event, "journey");
+			});
+		} else {
+			console.error("Element with ID 'tojourney2' not found.");
 		}
 	});
 </script>
