@@ -166,7 +166,6 @@
 
 		if (i === text.length - 1) {
 			setTimeout(() => {
-				// Start the dripping animation
 				const drip = document.querySelector(".drip") as HTMLElement;
 			}, 500);
 			return;
@@ -174,7 +173,7 @@
 
 		setTimeout(() => {
 			textType(element, text, i + 1);
-		}, 40);
+		}, 35);
 	}
 
 	textType(heroText, text);
