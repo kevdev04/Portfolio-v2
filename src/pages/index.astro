@@ -31,6 +31,7 @@ import Journey from '../components/Journey.astro';
 		const anchorProjects = document.getElementById("toprojects");
 		const anchorJourney = document.getElementById("tojourney");
 		const anchorJourney2 = document.getElementById("tojourney2");
+		const journey2Projects = document.getElementById("step-?");
 
 		function scrollToTargetOnClick(event, targetId) {
 			event.preventDefault();
@@ -45,6 +46,8 @@ import Journey from '../components/Journey.astro';
 			}
 		}
 
+
+		// anchor link event listeners
 		if (anchorLink) {
 			anchorLink.addEventListener("click", function (event) {
 				scrollToTargetOnClick(event, "about");
@@ -84,5 +87,22 @@ import Journey from '../components/Journey.astro';
 		} else {
 			console.error("Element with ID 'tojourney2' not found.");
 		}
+
+		if (journey2Projects) {
+    journey2Projects.addEventListener("click", function (event) {
+        // Prevent the default behavior of the click event
+        if (event) {
+            event.preventDefault();
+        }
+
+        // Wait for 6 seconds and then scroll to "projects"
+        setTimeout(function() {
+            scrollToTargetOnClick(event, "projects");
+        }, 4650);
+    });
+} else {
+    console.error("Element with ID 'step-?' not found.");
+}
+
 	});
 </script>
