@@ -1,7 +1,7 @@
 <section id="journey">
 	<div class="left-side">
 		<h2>My Journey</h2>
-		<div class="cards-2023">
+		<div id="cards-2023" class="cards-2023">
       <h4>August</h4>
 			<div class="card">
 				<h3>Ethical Hacking CTF Contest</h3>
@@ -11,7 +11,7 @@
 					<li>4th Place</li>
           <li>60 participants</li>
 				</ul>
-        <img src="/ctf.jpeg" alt="" />
+        <img src="/ctf.webp" alt="" />
 			</div>
       <h4>September</h4>
 			<div class="card">
@@ -22,7 +22,7 @@
           <li>Networking</li>
 					<li>Share Opportinities</li>
 				</ul>
-        <img src="/mlsa.png" alt="" />
+        <img src="/mlsa.webp" alt="" />
 			</div>
       <h4>October</h4>
 			<div class="card">
@@ -33,10 +33,45 @@
           <li>242 participants</li>
 					<li>1250$-Prizepool</li>
 				</ul>
-        <img src="/mlh.jpeg" alt="" />
+        <img src="/mlh.webp" alt="" />
 			</div>
-      
 		</div>
+		<div id="cards-2024" class="cards-2023">
+			<h4>?</h4>
+			<div class="card">
+				<h3>Coming...</h3>
+				<p>...</p>
+				<ul>
+					<li> ...</li>
+					<li>... </li>
+					<li> . </li>
+				</ul>
+				<img src="/" alt="" />
+			</div>
+			<h4>?</h4>
+			<div class="card">
+				<h3>Coming...</h3>
+				<p>...</p>
+				<ul>
+					<li>...</li>
+					<li>...</li>
+					<li>...</li>
+				</ul>
+				<img src="/" alt="" />
+			</div>
+			<h4>?</h4>
+			<div class="card">
+				<h3>Coming...</h3>
+				<p>...</p>
+				<ul>
+					<li> ...</li>
+					<li>... </li>
+					<li> . </li>
+				</ul>
+				<img src="/" alt="" />
+			</div>
+		</div>
+
 	</div>
 	<div class="right-side">
 		<div class="progress-bar">
@@ -112,6 +147,10 @@
 			p {
 				font-size: 1rem;
 				margin: 1rem 0 1rem 0;
+			}
+
+			#cards-2024 {
+				display: none;
 			}
 
 			.cards-2023 {
@@ -597,6 +636,8 @@
 		const Fumes = document.getElementById("smoke1") as HTMLElement;
 		const Fumes2 = document.getElementById("smoke2") as HTMLElement;
 		const steamWrap = document.getElementById("steam-wrap") as HTMLElement;
+		const cards2023 = document.getElementById("cards-2023") as HTMLElement;
+		const cards2024 = document.getElementById("cards-2024") as HTMLElement;
 
 		// Event listeners
 		step2024.addEventListener("click", function () {
@@ -606,6 +647,9 @@
 			internship.classList.remove("active");
 			firepit.style.display = "block";
 			steamWrap.style.display = "block";
+			cards2023.style.display = "none";
+			cards2024.style.display = "flex";
+
 		});
 
 		step2023.addEventListener("click", function () {
@@ -616,6 +660,8 @@
 			firepit.style.display = "none";
 			Fumes.style.display = "block";
 			Fumes2.style.display = "block";
+			cards2023.style.display = "flex";
+			cards2024.style.display = "none";
 		});
 
 		internship.addEventListener("click", function () {
@@ -633,20 +679,11 @@
 				Fumes2.style.display = "none";
 			}
 
-			// Check if the rocket has the crash-animation class
 			if (rocket.classList.contains("crash-animation")) {
 				firepit.style.display = "none";
 			}
 		});
 
-		rocket.addEventListener("animationend", function (event) {
-			if (event.animationName === "crashRocket") {
-				const explosion = document.querySelector(".explosion") as HTMLElement;
-				explosion.style.display = "none";
-				rocket.classList.remove("crash-animation");
-				explosion.classList.remove("explode-animation");
-			}
-		});
 
 		//stars
 	});
